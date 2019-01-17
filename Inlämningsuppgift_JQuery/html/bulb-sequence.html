@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="../css/main.css" rel="stylesheet">
+</head>
+<body class="page-black">
+
+    <div class="playground playground-black">
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+
+    <button id="lightButton">"Light me up"-bulb</button>
+    <img id="bulb1" src="../img/bulb-on.jpg" class="bulb" />
+    <img id="bulb2" src="../img/bulb-off.jpg" class="bulb" />
+    <img id="bulb3" src="../img/bulb-off.jpg" class="bulb" />
+    <img id="bulb4" src="../img/bulb-off.jpg" class="bulb" />
+    <img id="bulb5" src="../img/bulb-off.jpg" class="bulb" />
+    </div>
+
+    <script>
+
+        let bulbCount = 0;
+        var bulbs = document.getElementsByClassName("bulb");
+        
+        $("#lightButton").click(function () {
+            $(bulbs[bulbCount]).attr("src", "../img/bulb-off.jpg")
+            bulbCount++;
+            if (bulbCount >4) {
+                bulbCount = 0;
+            }
+            $(bulbs[bulbCount]).attr("src", "../img/bulb-on.jpg")
+            
+        })
+
+    </script>
+
+</body>
+</html>
